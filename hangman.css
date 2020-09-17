@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span {
+  cursor: default;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 4fr 2fr;
+}
+
+.letterBox {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  text-align: center;
+  margin: 40px 0 40px 0;
+  height: 60px;
+}
+
+.letter {
+  background-color: rgb(80, 200, 240);
+  border: solid 2px rgb(0, 60, 130);
+  color: rgb(0, 60, 130);
+  font-size: 3vw;
+  padding: 4px;
+  margin: 2px;
+  z-index: 0;  
+  cursor: pointer;
+  transition-duration: 0.3s;
+  vertical-align: top;
+}
+
+span.letter:hover {
+  transition-duration: 0.2s;
+  color: rgb(80, 200, 240);
+  background-color: rgb(0, 60, 130);
+  padding: 4px 12px;
+  margin: 0;
+}
+
+span.highlight {
+  background-color: lightblue;
+  position: absolute;
+}
+
+canvas.gradient {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  width: 100%;
+  height: 200px;
+  z-index: -5;
+}
+
+.wordBox {
+position: absolute;
+top: 560px;
+right: 400px;
+max-width: 200px;
+z-index: 5;
+}
+
+span.word {
+  font-size: 3vw;
+  margin: 3px;
+}
+
+.fade {
+  opacity: 0;
+}
+
+img.imgHangman {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+  width: 100%;
+  transition: opacity 3s ease-out;
+}
+
+footer {
+  background-color: rgb(70, 70, 70);
+  color: rgb(230, 230, 230);
+  height: 80px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+  padding: 50px 0 0 0;
+}
